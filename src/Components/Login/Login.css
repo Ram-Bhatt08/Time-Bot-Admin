@@ -1,0 +1,197 @@
+/* ---------- General Container ---------- */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background: #f5f7fa;
+}
+
+/* ---------- Auth Card ---------- */
+.auth-card {
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.auth-card h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ---------- Form Groups ---------- */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.4);
+}
+
+.form-group input.error {
+  border-color: #d9534f;
+}
+
+.error-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #d9534f;
+  text-align: left;
+}
+
+/* ---------- Submit Button ---------- */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+}
+
+.submit-btn:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+/* ---------- Switch Mode ---------- */
+.switch-mode {
+  margin-top: 20px;
+}
+
+.switch-mode p {
+  font-size: 14px;
+  color: #444;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #2575fc;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.switch-btn:hover {
+  color: #6a11cb;
+}
+
+/* ---------- Notification ---------- */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: fadeOut 2.5s forwards;
+}
+
+.notification.success {
+  background-color: #4BB543; /* Green */
+}
+
+.notification.error {
+  background-color: #FF4C4C; /* Red */
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .auth-card {
+    padding: 35px 25px;
+    max-width: 350px;
+  }
+
+  .auth-card h2 {
+    font-size: 22px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 11px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .auth-card h2 {
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-group input {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .switch-mode p {
+    font-size: 13px;
+  }
+}
